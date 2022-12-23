@@ -74,6 +74,7 @@ const Home: NextPage = () => {
         />
         <label className="text-gray-600">
           <input
+            checked={fetchForCollection}
             type="checkbox"
             className="mr-2"
             onChange={(e) => setFetchForCollection(e.target.checked)}
