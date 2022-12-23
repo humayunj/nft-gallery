@@ -10,7 +10,7 @@ const Home: NextPage = () => {
     "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d"
   );
   const [NFTs, setNFTs] = useState<any[]>([]);
-  const [fetchForCollection, setFetchForCollection] = useState(false);
+  const [fetchForCollection, setFetchForCollection] = useState(true);
   const [fetching, setFetching] = useState(false);
   const fetchNFTs = async () => {
     let nfts;
