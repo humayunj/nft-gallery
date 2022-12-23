@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function NFTCard({ nft }: { nft: any }) {
-  console.log("NFT:", nft);
   return (
     <div className="flex flex-col w-1/4">
       <div className="rounded-md">
