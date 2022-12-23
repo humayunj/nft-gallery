@@ -2,14 +2,15 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
-import NFTCard from "./components/nftCard";
+import NFTCard from "../components/nftCard";
 
 const Home: NextPage = () => {
   const [wallet, setWalletAddress] = useState("");
   const [collection, setCollectionAddress] = useState("");
-  const [NFTs, setNFTs] = useState([]);
+  const [NFTs, setNFTs] = useState<any[]>([]);
   const [fetchForCollection, setFetchForCollection] = useState(false);
   const [fetching, setFetching] = useState(false);
+  console.log("NFTs:", NFTs);
   const fetchNFTs = async () => {
     let nfts;
     console.log("fetching nfts");
@@ -113,7 +114,7 @@ const Home: NextPage = () => {
         </button>
       </div>
       <div className="flex flex-wrap gap-y-12 mt-4 w-full gap-x-2 justify-center">
-        {!NFTs.length ? NFTs.map((nft) => <NFTCard nft={nft} />) : null}
+        {NFTs.length > 0 ? NFTs.map((nft) => <NFTCard nft={nft} />) : null}
       </div>
     </div>
   );
