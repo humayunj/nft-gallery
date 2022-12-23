@@ -113,7 +113,7 @@ const Home: NextPage = () => {
         </button>
       </div>
       <div className="flex flex-wrap gap-y-12 mt-4 w-full gap-x-2 justify-center">
-        {NFTs.length ? NFTs.map((nft) => <NFTCard nft={nft} />) : null}
+        {!NFTs.length ? NFTs.map((nft) => <NFTCard nft={nft} />) : null}
       </div>
     </div>
   );
