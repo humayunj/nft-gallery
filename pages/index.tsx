@@ -60,17 +60,17 @@ const Home: NextPage = () => {
         <input
           type="text"
           className="py-2 px-3 w-1/3 rounded-md bg-slate-200"
-          disabled={fetchForCollection}
-          placeholder="Add your wallet address"
-          value={wallet}
-          onChange={(e) => setWalletAddress(e.target.value)}
+          placeholder="Add the collection address"
+          value={collection}
+          onChange={(e) => setCollectionAddress(e.target.value)}
         />
         <input
           type="text"
           className="py-2 px-3 w-1/3 rounded-md bg-slate-200"
-          placeholder="Add the collection address"
-          value={collection}
-          onChange={(e) => setCollectionAddress(e.target.value)}
+          disabled={fetchForCollection}
+          placeholder="Add your wallet address"
+          value={wallet}
+          onChange={(e) => setWalletAddress(e.target.value)}
         />
         <label className="text-gray-600">
           <input
