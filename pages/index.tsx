@@ -39,6 +39,8 @@ const Home: NextPage = () => {
 
   const fetchNFTsForCollection = async () => {
     if (collection.length) {
+      setFetching(true);
+
       var requestOptions = {
         method: "GET",
       };
@@ -52,6 +54,7 @@ const Home: NextPage = () => {
         console.log("NFTs in collection:", nfts);
         setNFTs(nfts.nfts);
       }
+      setFetching(false);
     }
   };
   return (
