@@ -5,10 +5,10 @@ import { useState } from "react";
 import NFTCard from "../components/nftCard";
 
 const Home: NextPage = () => {
-  const [wallet, setWalletAddress] = useState(
+  const [wallet, setWalletAddress] = useState("");
+  const [collection, setCollectionAddress] = useState(
     "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d"
   );
-  const [collection, setCollectionAddress] = useState("");
   const [NFTs, setNFTs] = useState<any[]>([]);
   const [fetchForCollection, setFetchForCollection] = useState(false);
   const [fetching, setFetching] = useState(false);
